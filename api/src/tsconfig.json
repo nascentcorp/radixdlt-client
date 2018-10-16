@@ -1,7 +1,7 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "../dist",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "target" : "es6",
@@ -13,7 +13,7 @@
     "typeRoots": ["node_modules/@types", "node_modules/@reactivex/rxjs", "src/types"]
   },
   "include": [
-    "src/**/*"
+    "**/*"
   ],
   "exclude": [
       "node_modules",
