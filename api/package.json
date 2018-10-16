@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@types/long": "^4.0.0",
+    "express": "^4.16.4",
+    "long": "^4.0.0",
+    "radixdlt": "^1.0.0-alpha"
+  },
+  "devDependencies": {
+    "@types/es6-promise": "^3.3.0",
+    "@types/node": "^10.12.0"
+  }
+}
