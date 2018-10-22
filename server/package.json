@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@types/long": "^4.0.0",
+    "express": "^4.16.4",
+    "radixdlt": "^1.0.0-alpha"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "start": "tsc -P ./src && node ./dist/server.js",
+    "debug": "tsc -P ./src && nodemon --inspect ./dist/server.js"
+  }
+}

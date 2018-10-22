@@ -5,12 +5,12 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "target" : "es6",
-    "lib": ["es6", "es2015", "es2015.promise", "dom", "scripthost"],
+    "lib": ["es6", "dom", "scripthost"],
     "module": "commonjs",
     "sourceMap": true,
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
-    "typeRoots": ["node_modules/@types", "node_modules/@reactivex/rxjs", "src/types"]
+    "typeRoots": ["node_modules/@types"]
   },
   "include": [
     "**/*"
