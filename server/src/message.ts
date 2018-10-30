@@ -1,19 +1,16 @@
 import Runtime from './runtime'
-import Response from 'express'
+import {Request, Response} from 'express'
 import { RadixTransactionBuilder, RadixIdentity } from 'radixdlt'
 import TransactionResponseHandler from './transactionResponseHandler'
 
-function sendMessage(req:Request, res:Response, identity:RadixIdentity): void {
-
-  req.json()
-    .then((message) => {
-      const transactionStatus = RadixTransactionBuilder
-      .createRadixMessageAtom(identity.account, Runtime.testAccount, message)
-      .signAndSubmit(identity)
-                        
-      TransactionResponseHandler.handle(res, transactionStatus)
-    })
-    .catch((err) => res.send(err))
+async function sendMessage(req:Request, res:Response, identity:RadixIdentity) {
+    console.log('Sending message: ' + req.body)
+    
+    const transactionStatus = RadixTransactionBuilder
+    .createRadixMessageAtom(identity.account, Runtime.testAccount, req.body)
+    .signAndSubmit(identity)
+                      
+    return await TransactionResponseHandler.handle(res, transactionStatus)
 
 }
 

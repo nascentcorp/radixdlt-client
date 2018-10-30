@@ -36,6 +36,10 @@ class Runtime {
     this._testAccount = RadixAccount.fromAddress('9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM')
   }
 
+  static async shutDown() {
+    this._account
+  }
+
 // Subscribe for any new incoming transactions
 // publicTestAccount.transferSystem.transactionSubject.subscribe(transactionUpdate => {
 //   console.log(transactionUpdate)

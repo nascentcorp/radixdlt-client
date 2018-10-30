@@ -1,7 +1,7 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "outDir": "../dist",
+    "outDir": "../test",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "target" : "es6",
@@ -13,10 +13,9 @@
     "typeRoots": ["node_modules/@types"]
   },
   "include": [
-    "**/*"
+    "**/*.test.ts"
   ],
   "exclude": [
-      "node_modules",
-      "**/*.test.ts"
+      "node_modules"
   ]
 }

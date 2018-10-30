@@ -62,3 +62,6 @@ typings/
 
 client/dist/
 server/dist/
+server/test/src/
+server/test/test/
+server/src/*.js

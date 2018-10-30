@@ -4,7 +4,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "nodemon API",
+      "name": "nodemon Server",
       "runtimeExecutable": "nodemon",
       "program": "${workspaceFolder}/server/dist/server.js",
       "restart": true,
@@ -14,22 +14,25 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Mocha Tests",
-      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "name": "Server Mocha Tests",
+      "program": "${workspaceFolder}/server/node_modules/mocha/bin/_mocha",
       "args": [
         "-u",
         "tdd",
+        "-r",
+        "ts-node/register/transpile-only",
         "--timeout",
         "999999",
         "--colors",
-        "${workspaceFolder}/test"
+        "${workspaceFolder}/server/test/**/*.ts"
       ],
-      "internalConsoleOptions": "openOnSessionStart"
+      "internalConsoleOptions": "openOnSessionStart",
+      "protocol":"inspector"
     },
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch API",
+      "name": "Launch Server",
       "program": "${workspaceFolder}/server/dist/server.js",
       "outFiles": [
         "${workspaceFolder}/server/dist/*.js"
